@@ -12,7 +12,7 @@ The design patterns discussed in the book will be used to implement a single-pla
 ## Useful Links
 * [Book GitHub Repo](https://github.com/PacktPublishing/Game-Development-Patterns-with-Unity-2021-Second-Edition)
 * [C# Naming Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
-
+* [Monobehavior Lifecycle Events](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
   
 ## Notes
 
@@ -21,4 +21,5 @@ A `GameObject` is the basic class for a Unity entity.  It comes with a transform
 
 ### Component
 * A component must extend `MonoBehavior` to be used as a `Component`.
+* Monobehavior Lifecycle Handlers are inherited from `MonoBehavior`.  Refer to Useful Links for Unity documentation.
 

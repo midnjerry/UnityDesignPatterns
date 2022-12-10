@@ -2,17 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-
-
-How to implement a Generic Singleton for Unity consumption.
-(from Game Development Patterns with Unity 2021, 2nd Edition)
-
-
-
-
-*/
-
 
 public class Singleton<T>:MonoBehaviour where T : Component
 {
@@ -25,13 +14,14 @@ public class Singleton<T>:MonoBehaviour where T : Component
             if (s_instance == null)
             {
                 s_instance = FindObjectOfType<T>();
+                //If null, GameObject with Component does not exist.
                 if (s_instance == null)
                 {
                     GameObject obj = new GameObject();
                     obj.name = typeof(T).Name;
                     s_instance = obj.AddComponent<T>();
                 }
-            }
+            }            
             return s_instance;
         }
     }
@@ -40,6 +30,7 @@ public class Singleton<T>:MonoBehaviour where T : Component
         if(s_instance == null)
         {
             s_instance = this as T;
+            // Don't destroy on next Scene load.
             DontDestroyOnLoad(gameObject);
         }
         else
