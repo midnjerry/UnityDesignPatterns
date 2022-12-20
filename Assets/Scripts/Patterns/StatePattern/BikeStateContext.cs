@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BikeStateContext : MonoBehaviour
+public class BikeStateContext
 {
     public IBikeState CurrentState { get; set; }
     private readonly BikeController _bikeController;
