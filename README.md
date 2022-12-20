@@ -8,6 +8,19 @@ The design patterns discussed in the book will be used to implement a single-pla
 
 ## Design Patterns
 * Singleton
+* State Pattern
+
+### Singleton
+Sample GameManager is loaded at beginning that persists through multiple scenes.
+
+### State Pattern
+Rudimentary State Pattern set to control thrust, stop, and lateral movement.  Each State is its own class that implements `IBikeState`.
+* StartBike
+* StopBike
+* Turn(Direction)
+
+
+
 
 ## Useful Links
 * [Book GitHub Repo](https://github.com/PacktPublishing/Game-Development-Patterns-with-Unity-2021-Second-Edition)
