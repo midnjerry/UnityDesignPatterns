@@ -9,6 +9,7 @@ The design patterns discussed in the book will be used to implement a single-pla
 ## Design Patterns
 * Singleton
 * State Pattern
+* EventBus Pattern
 
 ### Singleton
 Sample GameManager is loaded at beginning that persists through multiple scenes.
@@ -19,6 +20,12 @@ Rudimentary State Pattern set to control thrust, stop, and lateral movement.  Ea
 * StopBike
 * Turn(Direction)
 
+### Event Bus Pattern
+The Event Bus Pattern is a class that acts as a central hub for subscribers, publishers, and various events.
+
+A map is used to keep track of enums and `UnityEvent`s.  Subscribers provide callback functions and are attached as listeners to specific events.  When a publisher invokes an event, all listeners (tracked by map) are then executed.
+
+In the example, an event bus pattern is used to track the lifecycle events of a race and is also used to implement a countdown timer.
 
 
 
