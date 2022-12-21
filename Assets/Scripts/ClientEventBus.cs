@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ClientEventBus : MonoBehaviour
 {
+    public BikeController bikeController;
     private bool _isButtonEnabled;
 
     private void Start()
     {
         gameObject.AddComponent<HUDController>();
         gameObject.AddComponent<CountdownTimer>();
-        gameObject.AddComponent<BikeController>();
 
         _isButtonEnabled = true;
     }
