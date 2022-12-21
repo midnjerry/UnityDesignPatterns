@@ -9,6 +9,7 @@ public class BikeController : MonoBehaviour
     public float CurrentSpeed { get; set; }
     public Direction CurrentTurnDirection { get; private set; }
     private IBikeState _startState, _stopState, _turnState;
+    private string _status;
 
     private BikeStateContext _bikeStateContext;
     private void Start()
@@ -22,11 +23,13 @@ public class BikeController : MonoBehaviour
 
     public void StartBike()
     {
+        _status = "Started";
         _bikeStateContext.Transition(_startState);
     }
 
     public void StopBike()
     {
+        _status = "Stopped";
         _bikeStateContext.Transition(_stopState);
     }
 
@@ -34,5 +37,25 @@ public class BikeController : MonoBehaviour
     {
         CurrentTurnDirection = direction;
         _bikeStateContext.Transition(_turnState);
+    }
+
+    private void OnEnable()
+    {
+        RaceEventBus.Subscribe(RaceEventType.START, StartBike);
+        RaceEventBus.Subscribe(RaceEventType.STOP, StopBike);
+    }
+
+    private void OnDisable()
+    {
+        RaceEventBus.Unsubscribe(RaceEventType.START, StartBike);
+        RaceEventBus.Unsubscribe(RaceEventType.STOP, StopBike);
+    }
+
+    private void OnGUI()
+    {
+        GUI.color = Color.green;
+        GUI.Label(
+            new Rect(10, 260, 200, 20),
+            "BIKE STATUS: " + _status);
     }
 }
