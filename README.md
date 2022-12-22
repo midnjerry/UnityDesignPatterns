@@ -10,6 +10,8 @@ The design patterns discussed in the book will be used to implement a single-pla
 * Singleton
 * State Pattern
 * EventBus Pattern
+* Command Pattern
+* Object Pool Pattern
 
 ### Singleton
 Sample GameManager is loaded at beginning that persists through multiple scenes.
@@ -27,7 +29,9 @@ A map is used to keep track of enums and `UnityEvent`s.  Subscribers provide cal
 
 In the example, an event bus pattern is used to track the lifecycle events of a race and is also used to implement a countdown timer.
 
+### Command Pattern
 
+An InputController is used to assign buttons to specific commands.  When pressed, an `Invoker` executes and records the command.  These records are then use to replay gameplay.
 
 ## Useful Links
 * [Book GitHub Repo](https://github.com/PacktPublishing/Game-Development-Patterns-with-Unity-2021-Second-Edition)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class BikeController : MonoBehaviour
     public Direction CurrentTurnDirection { get; private set; }
     private IBikeState _startState, _stopState, _turnState;
     private string _status;
+    private bool _isTurboOn;
 
     private BikeStateContext _bikeStateContext;
     private void Start()
@@ -19,6 +21,12 @@ public class BikeController : MonoBehaviour
         _stopState = gameObject.AddComponent<BikeStopState>();
         _turnState = gameObject.AddComponent<BikeTurnState>();
         _bikeStateContext.Transition(_stopState);
+    }
+
+    public void ToggleTurbo()
+    {
+        _isTurboOn = !_isTurboOn;
+        Debug.Log("Turbo Active: " + _isTurboOn.ToString());
     }
 
     public void StartBike()
@@ -39,6 +47,11 @@ public class BikeController : MonoBehaviour
         _bikeStateContext.Transition(_turnState);
     }
 
+    public void ResetPosition()
+    {
+        transform.position = new Vector3(2, 1.0f, -25f);
+    }
+
     private void OnEnable()
     {
         RaceEventBus.Subscribe(RaceEventType.START, StartBike);
@@ -57,5 +70,7 @@ public class BikeController : MonoBehaviour
         GUI.Label(
             new Rect(10, 260, 200, 20),
             "BIKE STATUS: " + _status);
+
+        
     }
 }
