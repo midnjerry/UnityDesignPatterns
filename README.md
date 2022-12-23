@@ -33,6 +33,17 @@ In the example, an event bus pattern is used to track the lifecycle events of a 
 
 An InputController is used to assign buttons to specific commands.  When pressed, an `Invoker` executes and records the command.  These records are then use to replay gameplay.
 
+### Object Pool Pattern
+
+A `DroneObjectPool` class was created to implement Unity's `ObjectPool<T>`.  Callback functions were added for the following ObjectPool events:
+
+* OnCreatedPooledItem
+* OnTakeFromPool
+* OnReturnedToPool
+* OnDestroyPoolObject
+
+The Pool was created for `Drone` entities that attack the player then self-destruct after a few seconds.  Clicking a button generates multiple Drones and you can see entities get returned to ObjectPool and also destroyed.
+
 ## Useful Links
 * [Book GitHub Repo](https://github.com/PacktPublishing/Game-Development-Patterns-with-Unity-2021-Second-Edition)
 * [C# Naming Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
