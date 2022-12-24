@@ -13,7 +13,6 @@ public class ClientState : MonoBehaviour
 
     private void OnGUI()
     {
-        GUILayout.Button("");
         if (GUILayout.Button("Start Bike")) _bikeController.StartBike();
         if (GUILayout.Button("Turn Left")) _bikeController.Turn(Direction.LEFT);
         if (GUILayout.Button("Turn Right")) _bikeController.Turn(Direction.RIGHT);

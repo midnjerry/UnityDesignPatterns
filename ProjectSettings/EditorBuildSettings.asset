@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CommandExample.unity
     guid: 17941f7b732e04c4e9c6130c5704515d
+  - enabled: 1
+    path: Assets/Scenes/ObserverExample.unity
+    guid: 8dd08ca6a95deaa4994a3912e284a74e
   m_configObjects: {}

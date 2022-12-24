@@ -29,11 +29,13 @@ public class GameManager : Singleton<GameManager>
 
     private void OnGUI()
     {
-        if(GUILayout.Button("Next Scene"))
+        GUILayout.BeginArea(new Rect(Screen.width - 200, 0, 200, 50));
+        if (GUILayout.Button("Next Scene"))
         {
             // On button push, load next scene loaded in scene array.
             int lastIndex = SceneManager.sceneCountInBuildSettings - 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex % lastIndex + 1) ;
         }
+        GUILayout.EndArea();
     }
 }
