@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ObserverExample.unity
     guid: 8dd08ca6a95deaa4994a3912e284a74e
+  - enabled: 1
+    path: Assets/Scenes/VisitorExample.unity
+    guid: 61af02d265135e94cb45e89e89795905
   m_configObjects: {}

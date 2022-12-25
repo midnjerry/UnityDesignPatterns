@@ -327,8 +327,6 @@ GameObject:
   - component: {fileID: 821127652}
   - component: {fileID: 821127651}
   - component: {fileID: 821127655}
-  - component: {fileID: 821127657}
-  - component: {fileID: 821127658}
   m_Layer: 0
   m_Name: Bike
   m_TagString: Untagged
@@ -407,7 +405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821127650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 1.5, z: -25}
+  m_LocalPosition: {x: 2.01, y: 1.51, z: -24.35}
   m_LocalScale: {x: 0.5, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -423,36 +421,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 821127650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613abbda90f941e4fbad1d8cb3c38545, type: 3}
+  m_Script: {fileID: 11500000, guid: 682b897384bc78942859da1c407a0f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &821127657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821127650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0702f02f0b9b04b408dee083e078bb39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bikeController: {fileID: 821127658}
---- !u!114 &821127658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821127650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bafbf4209f6ea364f9153af3db054d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 2
-  turnDistance: 2
+  enginePowerUp: {fileID: 11400000, guid: 88442dd5427117444b8e74bb80ddad23, type: 2}
+  shieldPowerUp: {fileID: 11400000, guid: 38e55970c8f823a4fb974af4b6cd9391, type: 2}
+  weaponPowerUp: {fileID: 11400000, guid: 696b6ef3e6c010640a9d8aa376fc4ee6, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.61, y: 1, z: -26.1}
+  m_LocalPosition: {x: 1.97, y: 1.71, z: -26.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
