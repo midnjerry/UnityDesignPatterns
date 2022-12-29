@@ -83,6 +83,12 @@ public void Accept(IVisitor visitor)
 ```
 `BikeController.Accept` is called when Bike collides with PowerUp entity.
 
+## Strategy Pattern
+
+In this example, the strategy pattern is used to randomly assign an AI manuever to a spawned Drone.
+
+## Decorater Pattern
+
 # Useful Links
 * [Book GitHub Repo](https://github.com/PacktPublishing/Game-Development-Patterns-with-Unity-2021-Second-Edition)
 * [C# Naming Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
