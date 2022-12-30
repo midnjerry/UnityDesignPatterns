@@ -33,9 +33,9 @@ public class GameManager : Singleton<GameManager>
         int width = 300;
         GUI.color = Color.black;
         GUIStyle titleStyle = new GUIStyle();
-        titleStyle.fontSize = 24;
-        titleStyle.alignment = TextAnchor.UpperCenter;
-        GUI.Label(new Rect((Screen.width - width) / 2, 0, width, 50), "Current Scene: " + ConvertFromPascalCaseToSpaces(SceneManager.GetActiveScene().name), titleStyle);
+        titleStyle.fontSize = 48;
+        titleStyle.alignment = TextAnchor.UpperCenter;        
+        GUI.Label(new Rect((Screen.width - width) / 2, 0, width, 50), ConvertFromPascalCaseToSpaces(SceneManager.GetActiveScene().name), titleStyle);
         
         GUI.color = Color.white; 
         GUILayout.BeginArea(new Rect(Screen.width - 100, 0, 100, 50));
