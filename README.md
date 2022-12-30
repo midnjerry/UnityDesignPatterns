@@ -89,6 +89,8 @@ In this example, the strategy pattern is used to randomly assign an AI manuever 
 
 ## Decorater Pattern
 
+The Decorator Pattern is used to calculate the net attributes for a weapon.  The player has two WeaponComponent slots (Main and Secondary) that can be used to modify damage, range, rate of fire, and cooldown. 
+
 # Useful Links
 * [Book GitHub Repo](https://github.com/PacktPublishing/Game-Development-Patterns-with-Unity-2021-Second-Edition)
 * [C# Naming Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)

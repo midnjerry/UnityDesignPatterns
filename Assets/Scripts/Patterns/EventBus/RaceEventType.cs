@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum RaceEventType
+namespace Chapter.EventBus
 {
-    COUNTDOWN, START, RESTART, PAUSE, STOP, FINISH, QUIT
+    public enum RaceEventType
+    {
+        COUNTDOWN, START, RESTART, PAUSE, STOP, FINISH, QUIT
+    }
 }

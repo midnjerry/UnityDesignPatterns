@@ -1,27 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class BikeStartState : MonoBehaviour, IBikeState
+namespace Chapter.State
 {
-    private BikeController _bikeController;
-
-    public void Handle(BikeController controller)
+    public class BikeStartState : MonoBehaviour, IBikeState
     {
-        if (!_bikeController)
-        {
-            _bikeController = controller;
-        }
-        _bikeController.CurrentSpeed = _bikeController.maxSpeed;
-    }
+        private BikeController _bikeController;
 
-    void Update()
-    {
-        if (_bikeController)
+        public void Handle(BikeController controller)
         {
-            if (_bikeController.CurrentSpeed > 0)
+            if (!_bikeController)
             {
-                _bikeController.transform.Translate(Vector3.forward * (_bikeController.CurrentSpeed * Time.deltaTime));
+                _bikeController = controller;
+            }
+            _bikeController.CurrentSpeed = _bikeController.maxSpeed;
+        }
+
+        void Update()
+        {
+            if (_bikeController)
+            {
+                if (_bikeController.CurrentSpeed > 0)
+                {
+                    _bikeController.transform.Translate(Vector3.forward * (_bikeController.CurrentSpeed * Time.deltaTime));
+                }
             }
         }
     }

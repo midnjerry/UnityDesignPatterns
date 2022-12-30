@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface IBikeState
+namespace Chapter.State
 {
-    void Handle(BikeController controller);
+    public interface IBikeState
+    {
+        void Handle(BikeController controller);
+    }
 }

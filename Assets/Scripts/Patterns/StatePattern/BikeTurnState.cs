@@ -1,23 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class BikeTurnState : MonoBehaviour, IBikeState
+namespace Chapter.State
 {
-    private Vector3 _turnDirection;
-    private BikeController _bikeController;
-
-    public void Handle(BikeController controller)
+    public class BikeTurnState : MonoBehaviour, IBikeState
     {
-        if (!_bikeController)
-        {
-            _bikeController = controller;
-        }
+        private Vector3 _turnDirection;
+        private BikeController _bikeController;
 
-        _turnDirection.x = (float)_bikeController.CurrentTurnDirection;
-        if (_bikeController.CurrentSpeed > 0)
+        public void Handle(BikeController controller)
         {
-            transform.Translate(_turnDirection * _bikeController.turnDistance);
+            if (!_bikeController)
+            {
+                _bikeController = controller;
+            }
+
+            _turnDirection.x = (float)_bikeController.CurrentTurnDirection;
+            if (_bikeController.CurrentSpeed > 0)
+            {
+                transform.Translate(_turnDirection * _bikeController.turnDistance);
+            }
         }
     }
 }
