@@ -1,9 +1,11 @@
 # Unity Design Patterns
+[Play Demo](midnjerry.github.io/UnityDesignPatterns)
+
 This project follows the design patterns from the book:
 
 <i>Game Development Patterns with Unity 2021: Explore practical game development using software design patterns and best practices in Unity and C#</i>, 2nd Edition
 
-The design patterns discussed in the book will be used to implement a single-player racing game called **Edge Racer**.
+The design patterns discussed in the book are used to implement a single-player racing game called **Edge Racer**.
 
 ## Design Patterns
 
