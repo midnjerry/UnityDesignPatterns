@@ -107,3 +107,17 @@ A `GameObject` is the basic class for a Unity entity.  It comes with a transform
 * A component must extend `MonoBehavior` to be used as a `Component`.
 * Monobehavior Lifecycle Handlers are inherited from `MonoBehavior`.  Refer to Useful Links for Unity documentation.
 
+## Deploying Game to GitHub Pages
+1. Update Unity Build Settings
+    1. File -> Build Settings
+    2. Select `WebGL` as Platform
+    3. Click `Player Settings...` -> Publishing Settings -> Set Compression Format to `Disabled`
+    4. Build to `/docs` directory of repo project.
+2. Configure GitHub repo
+    1. In repo, go to Settings -> Pages
+    2. Set Source to `Deploy from a Branch`
+    3. Set Branch to `Master` and Folder to `/docs`
+3. Deploy to repo
+    1. Commit changes to `/docs` folder
+    2. Push up.
+    3. GitHub Pages will automatically deploy.
