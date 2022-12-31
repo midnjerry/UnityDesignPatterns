@@ -1,5 +1,5 @@
 # Unity Design Patterns
-[Play Demo](https://midnjerry.github.io/UnityDesignPatterns)
+<a href="https://midnjerry.github.io/UnityDesignPatterns" target="_blank">Play Demo</a>
 
 This project follows the design patterns from the book:
 
